@@ -1,0 +1,19 @@
+[package]
+name = "browser-shell"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[features]
+default = []
+gpu = ["dep:wgpu"]
+wry-backend = ["dep:wry"]
+
+[dependencies]
+anyhow.workspace = true
+crossbeam-channel.workspace = true
+tokio.workspace = true
+web-engine-api = { path = "../web-engine-api" }
+wgpu = { workspace = true, optional = true }
+wry = { workspace = true, optional = true }

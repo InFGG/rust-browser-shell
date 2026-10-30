@@ -1,0 +1,19 @@
+[workspace]
+members = [
+    "crates/web-engine-api",
+    "crates/browser-shell",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+rust-version = "1.82"
+
+[workspace.dependencies]
+anyhow = "1"
+crossbeam-channel = "0.5"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt", "sync", "time"] }
+wgpu = "24"
+wry = "0.53"
